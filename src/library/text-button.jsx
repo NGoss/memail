@@ -1,42 +1,36 @@
 import React from 'react'
 import withStyles from 'react-jss'
 import classnames from 'classnames'
+import Button from './button'
+
+// TODO: option to use heading tags (h1, h2, h3) instead of paragraph
 
 const styles = theme => ({
 	button: {
-		backgroundColor: (props) => {
-			return theme.color.hasOwnProperty(props.color)
-			? theme.color[props.color]
-			: props.backgroundColor
-		},
 		color: (props) => {
 			return theme.color.text.hasOwnProperty(props.color)
 			? theme.color.text[props.color]
 			: props.color
 		},
-		border: props => props.color === 'secondary' ?
-			`1px solid ${theme.color.text.secondary}` :
-			'none',
-		boxShadow: (props) => {
-			return theme.shadow[props.elevation]
-		},
-		...theme.animation.raise,
-		...theme.button
+		cursor: 'pointer',
+		margin: '0',
+		display: 'inline-block'
 	}
 })
 
-class Button extends React.Component {
+class TextButton extends React.Component {
 	render() {
 		const { classes, children, className } = this.props
 		const handleClick = this.props.onClick
 		return (
-			<button
+			<p
 				onClick={handleClick}
 				className={classnames(classes.button, className)}>
 				{children}
-			</button>
+			</p>
 		)
 	}
 }
 
-export default withStyles(styles)(Button)
+
+export default withStyles(styles)(TextButton)
