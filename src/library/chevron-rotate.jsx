@@ -18,13 +18,13 @@ const styles = theme => ({
 	left: {
 		height: props => props.size,
 		width: props => props.size * 0.5,
-		animation: 'rotate-back 150ms'
+		animation: 'rotate-back 250ms'
 	},
 	right: {
 		height: props => props.size,
 		width: props => props.size * 0.5,
 		transform: 'rotate(180deg)',
-		animation: 'rotate 150ms'
+		animation: 'rotate 250ms'
 	},
 	'@keyframes rotate': {
 		from: {

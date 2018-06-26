@@ -10,7 +10,10 @@ const styles = theme => ({
 		padding: '10px'
 	},
 	card: {
+		cursor: 'pointer',
 		margin: '5px auto',
+		padding: '10px',
+		borderRadius: '5px',
 		backgroundColor: theme.color.background
 	},
 	activeCard: {

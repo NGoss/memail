@@ -11,7 +11,8 @@ const styles = theme => ({
 		height: '100vh',
 		position: 'absolute',
 		left: 0,
-		top: 0
+		top: 0,
+		zIndex: 3,
 	},
 	collapseBar: {
 		color: theme.color.text.primary,

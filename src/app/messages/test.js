@@ -1,5 +1,5 @@
 const sentences = [
-	'Tbrand terrorists driving the initiative forward low-hanging fruit.',
+	'Brand terrorists driving the initiative forward low-hanging fruit.',
 	'Wiggle room idea shower, for social currency we\'re ahead of the curve on that one.',
 	'But what\'s the real problem we\'re trying to solve here?',
 	'Good optics not enough bandwidth guerrilla marketing, so message the initiative yet future-proof, but collaboration through advanced technlogy.',

@@ -5,20 +5,21 @@ import classnames from 'classnames'
 const styles = theme => ({
 	card: {
 		minHeight: '50px',
-		padding: '20px 40px',
+		position: 'relative',
+		backgroundColor: theme.color.background,
 		boxShadow: props => theme.shadow[props.elevation],
-		cursor: 'pointer',
-		backgroundColor: theme.color.background
+		zIndex: props => props.elevation,
+		...theme.animation.raise
 	}
 })
 
 class Card extends React.Component {
 	render() {
-		const { classes, children, className } = this.props
+		const { classes, children, className, ...props } = this.props
 
 		return (
-			<div
-				className={classnames(classes.card, className)}>
+			<div className={classnames(classes.card, className)}
+				{...props}>
 				{children}
 			</div>
 		)

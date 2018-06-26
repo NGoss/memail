@@ -4,6 +4,7 @@ import withStyles from 'react-jss'
 import BaseContext from './base-context'
 import FoldersDrawer from './folders-drawer'
 import Messages from './messages/'
+import Content from './content'
 
 const styles = theme => ({
 
@@ -15,11 +16,16 @@ class Inbox extends React.Component {
 
 		this.state = {
 			drawerOpen: true,
-			toggleDrawer: this.toggleDrawer.bind(this)
+			message: null,
+			toggleDrawer: this.toggleDrawer.bind(this),
+			setCurrentMessage: this.setCurrentMessage.bind(this)
 		}
 	}
 	toggleDrawer() {
 		this.setState({drawerOpen: !this.state.drawerOpen})
+	}
+	setCurrentMessage(message) {
+		this.setState({message})
 	}
 	render() {
 		const { classes } = this.props
@@ -27,6 +33,7 @@ class Inbox extends React.Component {
 			<BaseContext.Provider value={this.state}>
 				<FoldersDrawer />
 				<Messages />
+				<Content />
 			</BaseContext.Provider>
 		)
 	}
